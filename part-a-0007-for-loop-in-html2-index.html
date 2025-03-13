@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block pagecontent %}
+
+<h5 class="mt-3">Main Page</h5>
+
+<div class="mt-4">
+
+{% for age in ages %}
+
+    {% if age > 18 %}
+
+    <p>Age: {{age}} and he/she can vote!</p>
+
+    {% else %}
+
+    <p>Age: {{age}} and he/she is a child!</p>
+
+    {% endif %}
+
+{% endfor %}
+    
+</div>
+
+{% endblock pagecontent %}
