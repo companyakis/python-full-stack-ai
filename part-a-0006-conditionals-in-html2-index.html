@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block pagecontent %}
+
+<h5 class="mt-3">Main Page</h5>
+
+<div class="mt-4">
+
+    {% if total_sales > total_cost %}
+
+    <p>Profit: {{total_sales - total_cost}}</p>
+
+    {% elif total_sales < total_cost %}
+
+    <p>Loss: {{total_sales - total_cost}}</p>
+
+    {% else %}
+
+    <p>Sales amount is equal to cost!</p>
+
+    {% endif %}
+
+</div>
+
+
+{% endblock pagecontent %}
